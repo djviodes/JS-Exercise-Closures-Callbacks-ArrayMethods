@@ -18,6 +18,11 @@ function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
 
+const add = function(str){
+  return str + str;
+}
+
+console.log(processFirstItem(['foo', 'bar'], add));
 // ⭐️ Example Challenge END ⭐️
 
 
