@@ -33,9 +33,15 @@ console.log(processFirstItem(['foo', 'bar'], add));
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ *      counter1 has a parent function with the variable "count" defined inside while housing a child function that iterates the value of "count" by one upon each callback. counter2 calls upon the variable "count" that is defined in global scope.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ *      counter1 is the function that uses closure. You can tell because counter 1 has a child function that calls upon a variable declared in the parent function.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ *      counter1 would be preferable when creating a game that includes keeping score. counter2 would be better for creating numerous functions that would all call back to a variable in global scope.
  *
 */
 
@@ -48,6 +54,8 @@ function counterMaker() {
 }
 
 const counter1 = counterMaker();
+
+
 
 // counter2 code
 let count = 0;
