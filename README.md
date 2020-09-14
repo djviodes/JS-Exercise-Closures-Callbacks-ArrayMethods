@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+    Closure is when a child function will call upon a variable held within the parent function.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +64,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+    The closure comes from the "name" parameter getting called in the anonymous child function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+    What remains the same is the "name" and what changes is the value of the roll.
+
 c. What is the lexical scope of `newRoll`? 
+
+    The lexical scope of `newRoll` is the function used to randomly select a value for the dice.
 
 ### Task 3 - Stretch Goals
 

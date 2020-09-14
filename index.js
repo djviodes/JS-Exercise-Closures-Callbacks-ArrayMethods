@@ -127,8 +127,7 @@ Final Score: awayTeam - homeTeam */
 function getInningScore(){
   let awayTeam = inning();
   let homeTeam = inning();
-  return awayTeam;
-  return homeTeam;
+  return `${awayTeam} - ${homeTeam}`;
 }
 
 // console.log(getInningScore());
@@ -139,13 +138,11 @@ function scoreboard(callback, callback1, innings) {
     count = i;
     console.log(`inning ${count}: ${callback1()}-${callback1()}`);
   }
-  let finalScoreHome = 0;
-  let finalScoreAway = 0;
+  let finalScore = 0;
   for (let i = 0; i <= innings; i++){
-    finalScoreHome += callback();
-    finalScoreAway += callback();
+    finalScore += callback();
   }
-  return `Final Score: ${finalScoreAway} - ${finalScoreHome}`
+  return `Final Score: ${finalScore}`
 }
 
 console.log(scoreboard(getInningScore, inning, 9))
