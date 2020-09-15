@@ -27,11 +27,11 @@ There are layers upon layers of nested functions within the game of baseball. Yo
 
 ### Task 1 - Set Up Project and Tests
 
-1. Fork repo and add TL as collaborator on Github
-2. Clone _your_ fork (not Lambda's repo by mistake!)
-3. `cd` into your newly cloned repository
-4. Create a new branch by typing `git checkout -b <firstName-lastName>`
-5. Work on your branch, push commits and create PR as usual
+1. [X] Fork repo and add TL as collaborator on Github
+2. [X] Clone _your_ fork (not Lambda's repo by mistake!)
+3. [X] `cd` into your newly cloned repository
+4. [X] Create a new branch by typing `git checkout -b <firstName-lastName>`
+5. [X] Work on your branch, push commits and create PR as usual
 
 ### Task 2a - MVP code
 
@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+    Closure is when a child function will call upon a variable held within the parent function.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +64,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+    The closure comes from the "name" parameter getting called in the anonymous child function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+    What remains the same is the "name" and what changes is the value of the roll.
+
 c. What is the lexical scope of `newRoll`? 
+
+    The lexical scope of `newRoll` is the function used to randomly select a value for the dice.
 
 ### Task 3 - Stretch Goals
 
