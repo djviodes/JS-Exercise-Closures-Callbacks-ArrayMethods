@@ -124,7 +124,7 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
-function getInningScore(){
+function getInningScore(ca){
   let awayTeam = inning();
   let homeTeam = inning();
   return `${awayTeam} - ${homeTeam}`;
@@ -134,15 +134,17 @@ function getInningScore(){
 
 function scoreboard(callback, callback1, innings) {
   let count = 0;
+  let finalScoreAway = 0;
+  let finalScoreHome = 0;
   for (i = 1; i <= innings; i++){
     count = i;
-    console.log(`inning ${count}: ${callback1()}-${callback1()}`);
+    scoreAway = callback1();
+    scoreHome = callback1();
+    finalScoreAway += scoreAway;
+    finalScoreHome += scoreHome;
+    console.log(`inning ${count}: ${scoreAway} - ${scoreHome}`);
   }
-  let finalScore = 0;
-  for (let i = 0; i <= innings; i++){
-    finalScore += callback();
-  }
-  return `Final Score: ${finalScore}`
+  return `Final Score: ${finalScoreAway} - ${finalScoreHome}`
 }
 
 console.log(scoreboard(getInningScore, inning, 9))
